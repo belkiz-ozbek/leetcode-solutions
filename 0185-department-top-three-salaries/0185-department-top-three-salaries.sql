@@ -1,5 +1,5 @@
 # Write your MySQL query statement below
-WITH Top_Thee_Unique_Salaries AS(
+WITH Top_Three_Unique_Salaries AS(
     SELECT e.name AS employee_name, 
            e.salary, 
            e.departmentId, 
@@ -16,7 +16,7 @@ WITH Top_Thee_Unique_Salaries AS(
 SELECT department_name AS Department, 
        employee_name AS Employee, 
        salary AS Salary
-FROM Top_Thee_Unique_Salaries
+FROM Top_Three_Unique_Salaries
 WHERE denseRank = 1 OR denseRank = 2 OR denseRank = 3
 
 
